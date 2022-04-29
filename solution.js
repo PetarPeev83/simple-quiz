@@ -9,8 +9,6 @@ function solve() {
   let div = document.getElementById('quizzie');
   div.addEventListener('click', onClick);
 
-  console.log(result);
-
   function onClick(e) {
     if (e.target.className == 'answer-text') {
       // console.log(e.target)
@@ -23,17 +21,17 @@ function solve() {
         if (index < 5) {
           sections[index].style.display = 'block';
         }
-      } if (index == 5) {
+      }; if (index == 5) {
         // sections[index].style.display = 'none';
 
         if (correctAnswers == 5) {
           result.children[0].children[0].textContent = "Браво , ти позна всичките отговори!!!";
         } else {
           result.children[0].children[0].textContent = `ти имаш ${correctAnswers} верни отговора`;
-        }
+        };
         result.style.display = 'block';
-      }
+      };
       // console.log(correctAnswers);
-    }
-  }
-}
+    };
+  };
+};
